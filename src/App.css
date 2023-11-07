@@ -1,30 +1,98 @@
-/* src/NoteForm.css */
-.form-container {
+/* styles.css */
+.note-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-item {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.note-item h3 {
+  color: #333;
+}
+
+.note-item button {
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-note-form {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+/* styles.css */
+.note-card {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.custom-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.custom-card p {
+  color: #666;
+}
+
+.custom-card button {
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* styles.css */
+.note-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.note-card {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* ... Gaya lainnya yang Anda butuhkan */
+/* styles.css */
+.centered {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Menjadikan tinggi 100% tinggi layar */
-}
-
-form {
-  width: 100%;
-  max-width: 400px; /* Atur lebar maksimum formulir sesuai kebutuhan Anda */
-  padding: 20px;
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* src/App.css */
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-h1 {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
+  height: 100vh;
 }

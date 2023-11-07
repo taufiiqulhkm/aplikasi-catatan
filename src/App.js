@@ -1,28 +1,30 @@
 import React, { useState } from 'react';
-import './App.css';
-import NoteForm from './components/NoteForm/NoteForm';
-import NoteList from './components/NoteList/NoteList';
+import NoteList from '../src/components/NoteList/NoteList';
+import AddNoteForm from '../src/components/NoteForm/NoteForm';
+import { getInitialData, showFormattedDate } from './utils';
 import './App.css';
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const initialNotes = getInitialData();
+  const [notes, setNotes] = useState(initialNotes);
 
-  const addNote = (note) => {
-    setNotes([...notes, note]);
+  const addNote = (newNote) => {
+    setNotes([...notes, newNote]);
   };
 
-  const deleteNote = (index) => {
-    const newNotes = [...notes];
-    newNotes.splice(index, 1);
-    setNotes(newNotes);
+  const deleteNote = (id) => {
+    const updatedNotes = notes.filter((note) => note.id !== id);
+    setNotes(updatedNotes);
   };
 
   return (
-    <div className="App">
-      <h1>Aplikasi Catatan</h1>
-      <NoteList notes={notes} deleteNote={deleteNote} />
-      <NoteForm addNote={addNote} />
+    <div>
+    <h1 className="text-center mt-3">Aplikasi Catatan Pribadi</h1>
+    <div className="grid-container">
+      <AddNoteForm onAdd={addNote} />
+      <NoteList notes={notes} onDelete={deleteNote} />
     </div>
+  </div>
   );
 }
 
