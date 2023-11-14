@@ -1,4 +1,6 @@
+// NoteCard.js
 import React from 'react';
+import { showFormattedDate } from '../../utils/index'; // Adjust the path accordingly
 
 function NoteCard({ note, onDelete }) {
   return (
@@ -6,7 +8,7 @@ function NoteCard({ note, onDelete }) {
       <div className="custom-card">
         <h3>{note.title}</h3>
         <p>{note.body}</p>
-        <p>Tanggal: {note.createdAt}</p>
+        <p>Tanggal: {showFormattedDate(note.createdAt)}</p>
         <button onClick={() => onDelete(note.id)}>Hapus</button>
       </div>
     </div>
