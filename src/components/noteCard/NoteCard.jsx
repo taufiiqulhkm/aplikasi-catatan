@@ -1,6 +1,5 @@
-// NoteCard.js
 import React from 'react';
-import { showFormattedDate } from '../../utils/index'; // Adjust the path accordingly
+import { showFormattedDate } from '../../utils/index';
 
 function NoteCard({ note, onDelete }) {
   return (

@@ -96,3 +96,52 @@
   justify-content: center;
   height: 100vh;
 }
+
+.judul{
+  text-align: center;
+}
+
+.catatan{
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+
+  gap: 20px;
+ /* Adjust the max-width as needed */
+  margin: auto; /* This will center the grid container horizontally */
+}
+
+/* App.css */
+
+/* Add a new class for centering */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Style for AddNoteForm */
+.add-note-form {
+  max-width: 400px; /* Adjust the max-width as needed */
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for input fields */
+.add-note-form input,
+.add-note-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.catetan{
+  text-align: center;
+}

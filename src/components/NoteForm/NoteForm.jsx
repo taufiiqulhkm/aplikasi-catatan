@@ -1,4 +1,7 @@
+// AddNoteForm.jsx
+
 import React, { useState } from 'react';
+
 
 function AddNoteForm({ onAdd }) {
   const [newNote, setNewNote] = useState({ title: '', body: '' });
@@ -17,25 +20,27 @@ function AddNoteForm({ onAdd }) {
   };
 
   return (
-    <div>
-      <h2>Tambah Catatan Baru</h2>
-      <div>
-        <input
-          type="text"
-          placeholder="Judul"
-          value={newNote.title}
-          onChange={(e) => setNewNote({ ...newNote, title: e.target.value })}
-        />
-      </div>
-      <div>
-        <textarea
-          placeholder="Isi Catatan"
-          value={newNote.body}
-          onChange={(e) => setNewNote({ ...newNote, body: e.target.value })}
-        />
-      </div>
-      <div>
-        <button onClick={handleAddNote}>Tambah Catatan</button>
+    <div className="center-container"> {/* Apply the new class here */}
+      <div className="add-note-form"> {/* Apply the new class here */}
+        <h2 className='catetan'>Tambah Catatan Baru</h2>
+        <div>
+          <input
+            type="text"
+            placeholder="Judul"
+            value={newNote.title}
+            onChange={(e) => setNewNote({ ...newNote, title: e.target.value })}
+          />
+        </div>
+        <div>
+          <textarea
+            placeholder="Isi Catatan"
+            value={newNote.body}
+            onChange={(e) => setNewNote({ ...newNote, body: e.target.value })}
+          />
+        </div>
+        <div>
+          <button onClick={handleAddNote}>Tambah Catatan</button>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NoteList from '../src/components/NoteList/NoteList';
 import AddNoteForm from '../src/components/NoteForm/NoteForm';
-import { getInitialData, showFormattedDate } from './utils';
+import { getInitialData } from './utils';
 import './App.css';
 
 function App() {
@@ -19,12 +19,12 @@ function App() {
 
   return (
     <div>
-    <h1 className="text-center mt-3">Aplikasi Catatan Pribadi</h1>
-    <div className="grid-container">
-      <AddNoteForm onAdd={addNote} />
-      <NoteList notes={notes} onDelete={deleteNote} />
+      <h1 className="judul text-center mt-3">Aplikasi Catatan Pribadi</h1>
+      <div className="grid-container">
+        <AddNoteForm onAdd={addNote} />
+        <NoteList notes={notes} onDelete={deleteNote} />
+      </div>
     </div>
-  </div>
   );
 }
 
